@@ -1,0 +1,85 @@
+/* CSS Variables for Themes */
+:root[data-theme="light"] {
+  /* Backgrounds */
+  --bg-primary: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 50%, #f0f3f7 100%);
+  --bg-gradient-1: rgba(0, 149, 255, 0.08);
+  --bg-gradient-2: rgba(138, 43, 226, 0.05);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-border: rgba(0, 0, 0, 0.08);
+  --card-hover-border: rgba(0, 212, 255, 0.4);
+  
+  /* Text Colors */
+  --text-primary: #1a1f3a;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  
+  /* Accent Colors */
+  --accent-primary: #0095ff;
+  --accent-secondary: #6b1fd4;
+  
+  /* UI Elements */
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --input-bg: rgba(255, 255, 255, 0.6);
+  --divider: rgba(0, 0, 0, 0.08);
+  --shadow-color: rgba(0, 149, 255, 0.15);
+  --skill-bg: rgba(255, 255, 255, 0.5);
+}
+
+:root[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-primary: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1428 100%);
+  --bg-gradient-1: rgba(0, 149, 255, 0.15);
+  --bg-gradient-2: rgba(138, 43, 226, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-hover-border: rgba(0, 212, 255, 0.3);
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #b8c5d6;
+  --text-muted: #8b9cb5;
+  
+  /* Accent Colors */
+  --accent-primary: #00d4ff;
+  --accent-secondary: #7b2ff7;
+  
+  /* UI Elements */
+  --nav-bg: rgba(10, 14, 39, 0.7);
+  --input-bg: rgba(0, 0, 0, 0.3);
+  --divider: rgba(255, 255, 255, 0.05);
+  --shadow-color: rgba(0, 212, 255, 0.2);
+  --skill-bg: rgba(0, 0, 0, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Background gradient overlay */
+body::before {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, var(--bg-gradient-1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, var(--bg-gradient-2) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}

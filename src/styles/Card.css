@@ -1,0 +1,121 @@
+.card {
+  background: var(--card-bg, rgba(255, 255, 255, 0.8));
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border, rgba(0, 0, 0, 0.08));
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card.hoverable {
+  cursor: pointer;
+}
+
+.card.hoverable:hover {
+  transform: translateY(-8px);
+  border-color: var(--card-hover-border, rgba(0, 212, 255, 0.4));
+  box-shadow: 0 20px 50px var(--shadow-color, rgba(0, 212, 255, 0.2));
+}
+
+/* Card Variants */
+.card-default {
+  /* Default styling */
+}
+
+.card-elevated {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-bordered {
+  border: 2px solid var(--card-border, rgba(0, 0, 0, 0.1));
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, 
+    rgba(0, 212, 255, 0.05), 
+    rgba(123, 47, 247, 0.05)
+  );
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+/* Card Icon */
+.card-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-primary, #1a1f3a);
+}
+
+/* Card Description */
+.card-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-muted, #718096);
+  margin: 0;
+}
+
+/* Card Badge */
+.card-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.badge-default {
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--accent-primary, #00d4ff);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.badge-primary {
+  background: linear-gradient(135deg, var(--accent-primary, #00d4ff), var(--accent-secondary, #7b2ff7));
+  color: white;
+}
+
+.badge-secondary {
+  background: var(--card-bg, rgba(0, 0, 0, 0.05));
+  color: var(--text-secondary, #4a5568);
+  border: 1px solid var(--card-border, rgba(0, 0, 0, 0.1));
+}
+
+/* Dark Mode */
+[data-theme="dark"] .card {
+  background: var(--card-bg, rgba(255, 255, 255, 0.03));
+  border-color: var(--card-border, rgba(255, 255, 255, 0.08));
+}
+
+[data-theme="dark"] .card-elevated {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: 25px;
+  }
+
+  .card-icon {
+    font-size: 40px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-description {
+    font-size: 14px;
+  }
+}

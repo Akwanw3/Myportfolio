@@ -1,0 +1,107 @@
+
+.expertise-section {
+  background: var(--card-bg, rgba(255, 255, 255, 0.8));
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border, rgba(0, 0, 0, 0.08));
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.expertise-header {
+  margin-bottom: 40px;
+}
+
+.expertise-label {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--accent-primary, #00d4ff);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.expertise-title {
+  font-size: 36px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--text-primary, #1a1f3a), var(--accent-primary, #00d4ff));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.expertise-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.expertise-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(123, 47, 247, 0.1));
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary, #00d4ff);
+  flex-shrink: 0;
+}
+
+.expertise-details {
+  flex: 1;
+}
+
+.expertise-name-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.expertise-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary, #1a1f3a);
+}
+
+.expertise-percentage {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent-primary, #00d4ff);
+}
+
+.expertise-bar {
+  height: 8px;
+  background: var(--skill-bg, rgba(0, 0, 0, 0.05));
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.expertise-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-primary, #00d4ff), var(--accent-secondary, #7b2ff7));
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+}
+
+[data-theme="dark"] .expertise-section {
+  background: var(--card-bg, rgba(255, 255, 255, 0.03));
+}
+
+@media (max-width: 768px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+}

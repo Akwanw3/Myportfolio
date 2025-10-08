@@ -1,0 +1,76 @@
+
+.my-story-card {
+  background: var(--card-bg, rgba(255, 255, 255, 0.8));
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border, rgba(0, 0, 0, 0.08));
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.story-header {
+  margin-bottom: 30px;
+}
+
+.story-label {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--accent-primary, #00d4ff);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.story-title {
+  font-size: 36px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--text-primary, #1a1f3a), var(--accent-primary, #00d4ff));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.story-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.story-paragraph {
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--text-secondary, #4a5568);
+}
+
+.story-highlight {
+  margin-top: 40px;
+  padding: 25px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(123, 47, 247, 0.05));
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.highlight-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.highlight-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary, #1a1f3a);
+  line-height: 1.6;
+  margin: 0;
+}
+
+[data-theme="dark"] .my-story-card {
+  background: var(--card-bg, rgba(255, 255, 255, 0.03));
+}

@@ -1,0 +1,153 @@
+.typing-roles {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.name-text {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-primary, #1a1f3a);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+.norm{
+    font-size: small;
+}
+
+.name-highlight {
+  background: linear-gradient(135deg, var(--accent-primary, #00d4ff), var(--accent-secondary, #7b2ff7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  font-size: 1.1em;
+  position: relative;
+  display: inline-block;
+}
+
+.name-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-primary, #00d4ff), var(--accent-secondary, #7b2ff7));
+  border-radius: 10px;
+  animation: underlineExpand 0.8s ease-out 0.5s forwards;
+  transform: scaleX(0);
+}
+
+
+
+.role-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 60px;
+  flex-wrap: wrap;
+}
+
+.role-prefix {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text-secondary, #4a5568);
+  display: inline-block;
+}
+
+.role-text-wrapper {
+  min-width: 400px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.role-text {
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-primary, #00d4ff), var(--accent-secondary, #7b2ff7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  min-height: 1.2em;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: var(--accent-primary, #00d4ff);
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .name-text {
+    font-size: 32px;
+  }
+
+  .role-prefix,
+  .role-text {
+    font-size: 26px;
+  }
+
+  .role-text-wrapper {
+    min-width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .typing-roles {
+    padding: 30px 15px;
+  }
+
+  .name-text {
+    font-size: 28px;
+  }
+
+  .role-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .role-prefix,
+  .role-text {
+    font-size: 22px;
+  }
+
+  .role-text-wrapper {
+    min-width: 280px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .name-text {
+    font-size: 24px;
+  }
+
+  .role-prefix,
+  .role-text {
+    font-size: 20px;
+  }
+
+  .role-text-wrapper {
+    min-width: 240px;
+  }
+}
+

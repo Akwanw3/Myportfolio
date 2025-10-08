@@ -1,0 +1,119 @@
+
+
+/* Stats Section */
+
+.skills-stats {
+  background: var(--card-bg, rgba(255, 255, 255, 0.8));
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border, rgba(0, 0, 0, 0.08));
+  border-radius: 30px;
+  padding: 50px 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.stat-item {
+  text-align: center;
+  
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--accent-primary, #00d4ff), var(--accent-secondary, #7b2ff7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--text-muted, #718096);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-divider{
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(180deg, transparent, var(--divider, rgba(0, 0, 0, 0.1)), transparent);
+}
+
+/* Dark Mode */
+[data-theme="dark"] .skills-stats {
+  background: var(--card-bg, rgba(255, 255, 255, 0.03));
+}
+
+[data-theme="dark"] .skill-progress {
+  background: var(--skill-bg, rgba(255, 255, 255, 0.05));
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skills-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-snapshot {
+    padding: 80px 0;
+  }
+
+  .skills-container {
+    padding: 0 30px;
+  }
+
+  .skills-stats {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-description {
+    font-size: 18px;
+  }
+
+  .skills-stats {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 30px;
+  }
+
+  .stat-divider {
+    width: 80%;
+    height: 1px;
+  }
+
+  .stat-number {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    padding: 0 20px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .skills-stats {
+    padding: 30px 20px;
+  }
+}

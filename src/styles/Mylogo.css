@@ -1,0 +1,234 @@
+.logo-container {
+  display: inline-block;
+  position: relative;
+}
+
+.logo-link {
+  text-decoration: none;
+  display: block;
+}
+
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 8px 0;
+}
+
+/* Animated Background Glow */
+.logo-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.3), rgba(123, 47, 247, 0.2), transparent);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  filter: blur(20px);
+}
+
+.logo-glow.active {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+}
+
+/* Main Logo Text */
+.logo-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  letter-spacing: -2px;
+  z-index: 2;
+}
+
+.logo-sucre {
+  background: linear-gradient(135deg, 
+    var(--accent-primary, #00d4ff) 0%, 
+    var(--accent-secondary, #7b2ff7) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.logo-container:hover .logo-sucre {
+  background: linear-gradient(135deg, 
+    var(--accent-secondary, #7b2ff7) 0%, 
+    var(--accent-primary, #00d4ff) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+}
+
+.logo-x {
+  position: relative;
+  background: linear-gradient(135deg, 
+    #ff006e 0%, 
+    #ffbe0b 50%, 
+    #00d4ff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  display: inline-block;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  margin-left: -4px;
+}
+
+.logo-container:hover .logo-x {
+  transform: rotate(360deg) scale(1.2);
+  background: linear-gradient(135deg, 
+    #00d4ff 0%, 
+    #ff006e 50%, 
+    #ffbe0b 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Sparkle on X */
+.x-sparkle {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 0.4em;
+  color: var(--accent-primary, #00d4ff);
+  opacity: 0;
+  transform: scale(0) rotate(0deg);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.logo-container:hover .x-sparkle {
+  opacity: 1;
+  transform: scale(1) rotate(180deg);
+}
+
+.logo-container.animated .x-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+/* Animated Underline */
+.logo-underline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, 
+    var(--accent-primary, #00d4ff), 
+    var(--accent-secondary, #7b2ff7)
+  );
+  border-radius: 10px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px var(--accent-primary, #00d4ff);
+}
+
+.logo-underline.expand {
+  width: 100%;
+}
+
+/* Size Variants */
+.logo-container.small .logo-text {
+  font-size: 20px;
+}
+
+.logo-container.medium .logo-text {
+  font-size: 28px;
+}
+
+.logo-container.large .logo-text {
+  font-size: 48px;
+}
+
+.logo-container.xlarge .logo-text {
+  font-size: 72px;
+}
+
+/* Animated Shimmer Effect (when animated prop is true) */
+.logo-container.animated .logo-sucre::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    transparent
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 200%;
+  }
+}
+
+/* Pulse Animation for X (when animated prop is true) */
+.logo-container.animated .logo-x {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .logo-glow.active {
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.4), rgba(123, 47, 247, 0.3), transparent);
+}
+
+[data-theme="dark"] .logo-underline {
+  box-shadow: 0 0 20px var(--accent-primary, #00d4ff);
+}
+
+/* Accessibility */
+.logo-link:focus {
+  outline: 2px solid var(--accent-primary, #00d4ff);
+  outline-offset: 8px;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-container.large .logo-text {
+    font-size: 36px;
+  }
+
+  .logo-container.xlarge .logo-text {
+    font-size: 48px;
+  }
+}

@@ -1,0 +1,124 @@
+
+.philosophy-section {
+  background: var(--card-bg, rgba(255, 255, 255, 0.8));
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border, rgba(0, 0, 0, 0.08));
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+}
+.philosophy-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.philosophy-label {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--accent-primary, #00d4ff);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.philosophy-title {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, var(--text-primary, #1a1f3a), var(--accent-primary, #00d4ff));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.philosophy-subtitle {
+  font-size: 18px;
+  color: var(--text-muted, #718096);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.value-card {
+  background: var(--card-bg, rgba(0, 0, 0, 0.02));
+  border: 1px solid var(--card-border, rgba(0, 0, 0, 0.05));
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.value-card:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
+}
+
+.value-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(123, 47, 247, 0.1));
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary, #00d4ff);
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.value-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary, #1a1f3a);
+  margin-bottom: 10px;
+}
+
+.value-description {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted, #718096);
+  margin: 0;
+}
+
+[data-theme="dark"] .philosophy-section {
+  background: var(--card-bg, rgba(255, 255, 255, 0.03));
+}
+
+[data-theme="dark"] .value-card {
+  background: var(--card-bg, rgba(255, 255, 255, 0.02));
+}
+
+@media (max-width: 968px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .philosophy-section {
+    padding: 40px 30px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+} 

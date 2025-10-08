@@ -1,0 +1,208 @@
+.dynamic-greeting {
+  display: inline-block;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.greeting-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Icon Wrapper with Background */
+.greeting-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.greeting-icon {
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+/* Morning Styles */
+.dynamic-greeting.morning .greeting-icon-wrapper {
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(255, 165, 0, 0.1));
+  border: 2px solid rgba(139, 69, 19, 0.2);
+}
+
+.dynamic-greeting.morning .greeting-icon {
+  color: #8B4513;
+  animation: steam 2s ease-in-out infinite;
+}
+
+@keyframes steam {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.dynamic-greeting.morning .greeting-icon-wrapper:hover .greeting-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Afternoon Styles */
+.dynamic-greeting.afternoon .greeting-icon-wrapper {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.1));
+  border: 2px solid rgba(255, 193, 7, 0.3);
+}
+
+.dynamic-greeting.afternoon .greeting-icon {
+  color: #FFA500;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.dynamic-greeting.afternoon .greeting-icon-wrapper:hover .greeting-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Evening Styles */
+.dynamic-greeting.evening .greeting-icon-wrapper {
+  background: linear-gradient(135deg, rgba(63, 81, 181, 0.1), rgba(103, 58, 183, 0.1));
+  border: 2px solid rgba(63, 81, 181, 0.3);
+}
+
+.dynamic-greeting.evening .greeting-icon {
+  color: #5E72E4;
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px rgba(94, 114, 228, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(94, 114, 228, 0.8));
+  }
+}
+
+.dynamic-greeting.evening .greeting-icon-wrapper:hover .greeting-icon {
+  animation: sway 1.5s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+/* Text Styles */
+.greeting-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary, #1a1f3a);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.greeting-name {
+  background: linear-gradient(135deg, var(--accent-primary, #00d4ff), var(--accent-secondary, #7b2ff7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.greeting-emoji {
+  font-size: 32px;
+  display: inline-block;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Hover Effect */
+.dynamic-greeting:hover .greeting-icon-wrapper {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .greeting-content {
+    gap: 12px;
+  }
+
+  .greeting-icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .greeting-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .greeting-text {
+    font-size: 22px;
+  }
+
+  .greeting-emoji {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting-text {
+    font-size: 18px;
+    flex-wrap: wrap;
+  }
+
+  .greeting-emoji {
+    font-size: 22px;
+  }
+}
+
+

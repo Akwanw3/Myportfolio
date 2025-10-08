@@ -1,0 +1,145 @@
+
+.journey-experience {
+  background: var(--card-bg, rgba(255, 255, 255, 0.8));
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border, rgba(0, 0, 0, 0.08));
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.journey-header {
+  margin-bottom: 50px;
+}
+
+.journey-label {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--accent-primary, #00d4ff);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.journey-title {
+  font-size: 36px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--text-primary, #1a1f3a), var(--accent-primary, #00d4ff));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 50px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-primary, #00d4ff), var(--accent-secondary, #7b2ff7));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -56px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  background: var(--accent-primary, #00d4ff);
+  border-radius: 50%;
+  border: 4px solid var(--card-bg, rgba(255, 255, 255, 0.8));
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  z-index: 2;
+}
+
+.timeline-content {
+  background: var(--card-bg, rgba(0, 0, 0, 0.02));
+  border: 1px solid var(--card-border, rgba(0, 0, 0, 0.05));
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--accent-primary, #00d4ff);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.timeline-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary, #1a1f3a);
+  margin-bottom: 5px;
+}
+
+.timeline-company {
+  display: block;
+  font-size: 16px;
+  color: var(--text-muted, #718096);
+  margin-bottom: 15px;
+}
+
+.timeline-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary, #4a5568);
+  margin-bottom: 20px;
+}
+
+.timeline-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-badge {
+  padding: 6px 14px;
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--accent-primary, #00d4ff);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+[data-theme="dark"] .journey-experience {
+  background: var(--card-bg, rgba(255, 255, 255, 0.03));
+}
+
+[data-theme="dark"] .timeline-marker {
+  border-color: var(--card-bg, rgba(10, 14, 39, 0.95));
+}
+
+[data-theme="dark"] .timeline-content {
+  background: var(--card-bg, rgba(255, 255, 255, 0.02));
+}
