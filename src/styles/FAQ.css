@@ -1,0 +1,120 @@
+.faq-section {
+  background: var(--card-bg, rgba(255, 255, 255, 0.8));
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--card-border, rgba(0, 0, 0, 0.08));
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-title {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, var(--text-primary, #1a1f3a), var(--accent-primary, #00d4ff));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.faq-subtitle {
+  font-size: 15px;
+  color: var(--text-muted, #718096);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background: var(--card-bg, rgba(0, 0, 0, 0.02));
+  border: 1px solid var(--card-border, rgba(0, 0, 0, 0.05));
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.faq-question-btn {
+  width: 100%;
+  padding: 20px 25px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.faq-question-btn.active {
+  background: rgba(0, 212, 255, 0.05);
+}
+
+.faq-question {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary, #1a1f3a);
+}
+
+.faq-icon {
+  color: var(--accent-primary, #00d4ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.faq-question-btn:hover .faq-icon {
+  transform: rotate(90deg);
+}
+
+.faq-answer-wrapper {
+  overflow: hidden;
+}
+
+.faq-answer {
+  padding: 0 25px 20px 25px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary, #4a5568);
+  margin: 0;
+}
+
+[data-theme="dark"] .faq-section {
+  background: var(--card-bg, rgba(255, 255, 255, 0.03));
+}
+
+[data-theme="dark"] .faq-item {
+  background: var(--card-bg, rgba(255, 255, 255, 0.02));
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 40px 30px;
+  }
+
+  .faq-title {
+    font-size: 28px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+}

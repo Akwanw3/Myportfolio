@@ -2,15 +2,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Code, Palette } from 'lucide-react';
 import Button from '@/component/common/Button';
 import '@/styles/PortfolioModal.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function PortfolioModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
-  const handleNavigation = (type) => {
-    console.log(`Navigating to ${type} portfolio`);
-    // Add your navigation logic here
-    // Example: navigate(/portfolio/${type});
-    onClose();
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+     navigate(path);
+    
   };
 
   return (
@@ -64,7 +65,7 @@ export default function PortfolioModal({ isOpen, onClose }) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 }}
                   whileHover={{ scale: 1.05 }}
-                  onClick={() => handleNavigation('development')}
+                  onClick={() => handleNavigation('/DevPage')}
                 >
                   <div className="card-icon-wrapper development">
                     <Code size={48} />
@@ -82,7 +83,7 @@ export default function PortfolioModal({ isOpen, onClose }) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 }}
                   whileHover={{ scale: 1.05 }}
-                  onClick={() => handleNavigation('design')}
+                  onClick={() => handleNavigation('/DesignPage')}
                 >
                   <div className="card-icon-wrapper design">
                     <Palette size={48} />

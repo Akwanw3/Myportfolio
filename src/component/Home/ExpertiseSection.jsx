@@ -4,14 +4,14 @@ import Card, { CardIcon, CardTitle, CardDescription } from '@/component/common/C
 import { Code, Palette } from 'lucide-react';
 import '@/styles/ExpertiseSection.css';
 
+
 export default function SkillsSnapshot() {
-  // Uncomment if using React Router
-  // const navigate = useNavigate();
+  
+ const navigate = useNavigate();
 
   const handleNavigate = (path) => {
-    console.log(`Navigating to ${path}`);
-    // navigate(path); // If using React Router
-    // window.location.href = path; // Alternative
+    
+    navigate(path); 
   };
 
   return (
@@ -37,7 +37,7 @@ export default function SkillsSnapshot() {
           <Card 
             hoverable={true}
             animated={true}
-            onClick={() => handleNavigate('/portfolio/development')}
+            onClick={() => handleNavigate('/DevPage')}
           >
             <div className="snapshot-card-content">
               <CardIcon>
@@ -78,7 +78,7 @@ export default function SkillsSnapshot() {
           <Card 
             hoverable={true}
             animated={true}
-            onClick={() => handleNavigate('/portfolio/design')}
+            onClick={() => handleNavigate('/DesignPage')}
           >
             <div className="snapshot-card-content">
               <CardIcon>

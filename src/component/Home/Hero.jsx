@@ -6,15 +6,18 @@ import Button from '@/component/common/Button';
 import PortfolioModal from '@/component/Home/PortfolioModal';
 import '@/styles/Hero.css';
 import sucreedit  from '@/assets/sucreedit.png';
+import { useNavigate } from 'react-router-dom';
 
 export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const userName = localStorage.getItem('userName') || 'Explorer';
 
+  const navigate= useNavigate()
+
   const handleHireMe = () => {
     console.log('Navigating to contact');
     // Add your navigation logic
-    // Example: navigate('/contact');
+    navigate('/Contact');
   };
 
   const handleViewPortfolio = () => {

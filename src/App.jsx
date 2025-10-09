@@ -6,6 +6,8 @@ import Home from './page/Home';
 import '@/App.css';
 import AboutPage from './page/About';
 import ServicesPage from './page/Services';
+import ContactPage from './page/Contact';
+import DevelopmentPortfolio from './page/DevPage';
 
 
 
@@ -20,9 +22,10 @@ function App() {
     <Route path='/Home' element={<Home/>}/>
     <Route path='/About' element={<AboutPage/>}/>
     <Route path='/Services' element={<ServicesPage/>}/>
+    <Route path='/Contact' element={<ContactPage/>}/>
+    <Route path='/DevPage' element={<DevelopmentPortfolio/>}/>
       </Routes>
-     
-    <Footer/>
+         <Footer/>
      </Router>
     </ThemeProvider>
     
