@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Send, Loader } from 'lucide-react';
 import Button from '@/component/common/Button';
 import '@/styles/Form.css';
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -28,6 +29,22 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    emailjs.send(
+      "service_u7oe2mj",
+      "template_6ls444v",
+      formData,
+      "RtuUhXybVxkV88RbG",
+    ).then((response)=>{
+      console.log('success',response.status, response.text);
+      alert("message sent succesfully!");
+
+    },
+     (err)=>{
+      console.error("failed...", err);
+      alert('failed to send')
+      
+    });
     
     // Simulate API call
     setTimeout(() => {
@@ -250,12 +267,12 @@ import { Github, Linkedin, Twitter, Mail, Dribbble, MessageCircle } from 'lucide
 
 export  function SocialLinks() {
   const socials = [
-    { icon: <Github size={24} />, name: 'GitHub', link: 'https://github.com', username: '@sucrex' },
-    { icon: <Linkedin size={24} />, name: 'LinkedIn', link: 'https://linkedin.com', username: '@sucrex' },
-    { icon: <Twitter size={24} />, name: 'Twitter', link: 'https://twitter.com', username: '@sucrex' },
-    { icon: <Dribbble size={24} />, name: 'Dribbble', link: 'https://dribbble.com', username: '@sucrex' },
-    { icon: <Mail size={24} />, name: 'Email', link: 'mailto:hello@sucrex.dev', username: 'hello@sucrex.dev' },
-    { icon: <MessageCircle size={24} />, name: 'Discord', link: '#', username: 'sucrex#0000' }
+    { icon: <Github size={24} />, name: 'GitHub', link: 'https://github.com/Akwanw3', username: '@akwanwe' },
+    { icon: <Linkedin size={24} />, name: 'LinkedIn', link: 'www.linkedin.com/in/abiaxabia', username: 'Abia Abia' },
+    { icon: <Twitter size={24} />, name: 'Twitter', link: 'https://x.com/akwanwe', username: 'sucrex' },
+    { icon: <Dribbble size={24} />, name: 'Dribbble', link: 'https://dribbble.com/abia-abia', username: 'abia abia' },
+    { icon: <Mail size={24} />, name: 'Email', link: 'mailto:akpedasylva002@gmail.com', username: 'akpedasylva002@gmail.com' },
+    { icon: <MessageCircle size={24} />, name: 'Discord', link: 'https://discordapp.com/users/1370066410159476857', username: 'Sucre' }
   ];
 
   return (

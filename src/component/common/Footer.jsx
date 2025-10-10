@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail, Heart,Facebook, ArrowUp,  } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, Heart,Facebook, ArrowUp, MessageCircle,Send  } from 'lucide-react';
 import Logo from './Mylogo';
 import '@/styles/Footer.css';
 
@@ -39,7 +39,16 @@ export default function Footer() {
             </p>
             <div className="footer-socials">
               <a 
-                href="https://github.com" 
+                href="https://t.me/Web3_Sucre" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="Telegram"
+              >
+                <Send size={20} />
+              </a>
+              <a 
+                href="https://github.com/Akwanw3" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
@@ -48,7 +57,7 @@ export default function Footer() {
                 <Github size={20} />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="www.linkedin.com/in/abiaxabia" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
@@ -57,7 +66,7 @@ export default function Footer() {
                 <Linkedin size={20} />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://x.com/akwanwe" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
@@ -66,20 +75,29 @@ export default function Footer() {
                 <Twitter size={20} />
               </a>
               <a 
-                href="mailto:hello@sucrex.dev"
+                href="mailto:akpedasylva002@gmail.com"
                 className="social-link"
                 aria-label="Email"
               >
                 <Mail size={20} />
               </a>
                <a 
-                href="https://Facebook.com" 
+                href="https://Facebook.com/Viní Cíus" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
+              </a>
+              <a 
+                href="https://wa.me/2349126355886" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle size={20} />
               </a>
             </div>
           </div>

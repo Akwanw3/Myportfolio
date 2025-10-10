@@ -4,12 +4,12 @@ import '@/styles/ProfileCard.css';
 import Abia from '@/assets/Abia.png';
 
 export default function ProfileCard({ 
-  name = "SUCRE",
+  name = "ABIA AKPE ABIA",
   role = "Web Developer & UI/UX Designer",
-  location = "Your City, Country",
+  location = "UYO, NIGERIA",
   experience = "5+ Years",
   education = "Computer Science",
-  email = "hello@sucrex.dev",
+  email = "akpedasylva002@gmail.com",
   avatarSrc = "@/assets/Abia.png",
 }) {
   return (
@@ -64,10 +64,10 @@ export default function ProfileCard({
 
       {/* Social Links */}
       <div className="profile-socials">
-        <a href="#" className="social-link" aria-label="GitHub">💻</a>
-        <a href="#" className="social-link" aria-label="LinkedIn">💼</a>
-        <a href="#" className="social-link" aria-label="Twitter">🐦</a>
-        <a href="#" className="social-link" aria-label="Dribbble">🎨</a>
+        <a href="https://github.com/Akwanw3" className="social-link" aria-label="GitHub">💻</a>
+        <a href="www.linkedin.com/in/abiaxabia" className="social-link" aria-label="LinkedIn">💼</a>
+        <a href="https://x.com/akwanwe" className="social-link" aria-label="Twitter">🐦</a>
+        <a href="https://dribbble.com/abia-abia" className="social-link" aria-label="Dribbble">🎨</a>
       </div>
     </motion.div>
   );

@@ -31,14 +31,12 @@ export default function AboutPage() {
           {/* Sidebar - Profile Card (Sticky) */}
           <aside className="about-sidebar">
             <ProfileCard 
-              name="SUCRE"
+              
               role="Web Developer & Product Designer"
-              location="Your City, Country"
+              
               experience="5+ Years"
               education="Computer Science"
-              email="hello@sucrex.dev"
-              avatarSrc="/assets/avatar.png"
-              resumeLink="/path-to-resume.pdf"
+              
             />
           </aside>
 

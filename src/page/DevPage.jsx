@@ -4,27 +4,24 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from '../component/Project/ProjectCard';
 import GetInTouchCard from '@/component/common/CTASection';
-import Button from '@/component/common/Button';
-import '@/styles/DevPage.css';
-import { Download } from 'lucide-react';
+import chaindustryFullstack from '@/assets/chaindustryFullstack.png'
+import '@/styles/DevPage.css'
 
 export default function DevelopmentPortfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
-  const HandleOpen =()=>{
-    Window.location.href= '/softwareengineer.pdf'
-  }
+  
     
   const projects = [
     {
       id: 1,
-      title: 'TechFlow Analytics',
+      title: 'Chaindustry App',
       description: 'A comprehensive analytics platform built for modern businesses. Features real-time data visualization, custom dashboards, team collaboration tools, and advanced reporting capabilities.',
-      thumbnail: '/assets/projects/project1.jpg',
+      thumbnail: chaindustryFullstack,
       techStack: ['React', 'Next.js', 'TypeScript', 'Node.js', 'MongoDB'],
       type: 'fullstack',
       featured: true,
-      liveLink: 'https://example.com',
-      githubLink: 'https://github.com'
+      liveLink: 'https://app.chaindustry.io/',
+     
     },
     {
       id: 2,
@@ -131,20 +128,6 @@ export default function DevelopmentPortfolio() {
                  'Full-Stack Projects'}
               </span>
             </div>
-            <a href={`${import.meta.env.BASE_URL}sofwareengineer.pdf`}
-            target="_blank"
-           rel="noopener noreferrer"
-           className="download-resume-btn"
-           >
-          <Button 
-        variant="primary" 
-        size="medium"
-        icon={<Download size={18} />}
-        
-      >
-        Download Resume
-      </Button>
-      </a>
           </div>
 
           <div className="filter-tabs">

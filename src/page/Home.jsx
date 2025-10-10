@@ -8,7 +8,9 @@ function Home(){
         <div>
             <Hero/>
             <SkillsSnapshot/>
-          
+          <div>
+           
+          </div>
            <GetInTouchCard 
                    variant="colorful"
                    title="Let's Create Something Amazing"

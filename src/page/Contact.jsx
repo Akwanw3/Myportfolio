@@ -14,13 +14,13 @@ export default function ContactPage() {
       icon: <Mail size={28} />,
       title: 'Email Me',
       info: 'For general inquiries and project discussions',
-      link: 'mailto:hello@sucrex.dev',
-      linkText: 'hello@sucrex.dev'
+      link: 'mailto:akpedasylva002@gmail.com',
+      linkText: 'akpedasylva002@gmail.com'
     },
     {
       icon: <MapPin size={28} />,
       title: 'Location',
-      info: 'Based in Your City, Country',
+      info: 'Uyo, Nigeria',
       link: null,
       linkText: null
     },
