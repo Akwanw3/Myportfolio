@@ -8,7 +8,7 @@ import {
   Code, Palette, Server, Smartphone, Zap, Layers,
   Search, Lightbulb, Pencil, Rocket, HeadphonesIcon
 } from 'lucide-react';
-import '@/styles/service.css';
+import '@/styles/Services.css';
 
 export default function ServicesPage() {
   const mainServices = [
