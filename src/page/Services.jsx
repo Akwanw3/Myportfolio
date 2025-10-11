@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import ServiceCard from '../component/Services/Servicecard';
 import ProcessStep from '../component/Services/ProcessStep';
-import Animation from '@/component/services/p';
+import SkillsStats from '../component/Services/Skill';
 import GetInTouchCard from '../component/common/CTASection';
 import { 
   Code, Palette, Server, Smartphone, Zap, Layers,
@@ -157,7 +157,7 @@ export default function ServicesPage() {
             ))}
           </div>
         </section>
-        <Animation/>
+        <SkillsStats/>
 
         {/* All Services Grid */}
         <section className="all-services-section">
