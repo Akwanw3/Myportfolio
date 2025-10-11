@@ -5,7 +5,7 @@ import CaseStudyCard from '../component/Project/FilterTabs';
 import DesignShowcaseCard from '../component/Project/FeaturedProject';
 import GetInTouchCard from '../component/common/CTASection';
 import '@/styles/DesignPage.css';
-import chaindustryFullstack from '@/assets/chaindustryFullstack.png'
+import ChaindustryFullstack from '@/assets/ChaindustryFullstack.png'
 
 export default function DesignPortfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -49,7 +49,7 @@ export default function DesignPortfolio() {
   const designs = [
     {
       id: 3,
-      thumbnail: chaindustryFullstack,
+      thumbnail: ChaindustryFullstack,
       title: 'E-Commerce Mobile App',
       description: 'Shopping app UI with smooth checkout flow',
       type: 'Mobile UI',

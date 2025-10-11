@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from '../component/Project/ProjectCard';
 import GetInTouchCard from '@/component/common/CTASection';
-import chaindustryFullstack from '@/assets/chaindustryFullstack.png'
+import ChaindustryFullstack from '@/assets/ChaindustryFullstack.png'
 import '@/styles/DevPage.css'
 
 export default function DevelopmentPortfolio() {
@@ -16,7 +16,7 @@ export default function DevelopmentPortfolio() {
       id: 1,
       title: 'Chaindustry App',
       description: 'A comprehensive analytics platform built for modern businesses. Features real-time data visualization, custom dashboards, team collaboration tools, and advanced reporting capabilities.',
-      thumbnail: chaindustryFullstack,
+      thumbnail: ChaindustryFullstack,
       techStack: ['React', 'Next.js', 'TypeScript', 'Node.js', 'MongoDB'],
       type: 'fullstack',
       featured: true,
