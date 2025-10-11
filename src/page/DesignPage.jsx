@@ -5,6 +5,7 @@ import CaseStudyCard from '../component/Project/FilterTabs';
 import DesignShowcaseCard from '../component/Project/FeaturedProject';
 import GetInTouchCard from '../component/common/CTASection';
 import '@/styles/DesignPage.css';
+import chaindustryFullstack from '@/assets/chaindustryFullstack.png'
 
 export default function DesignPortfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -48,7 +49,7 @@ export default function DesignPortfolio() {
   const designs = [
     {
       id: 3,
-      thumbnail: '/assets/designs/design-1.jpg',
+      thumbnail: chaindustryFullstack,
       title: 'E-Commerce Mobile App',
       description: 'Shopping app UI with smooth checkout flow',
       type: 'Mobile UI',
@@ -57,7 +58,7 @@ export default function DesignPortfolio() {
     },
     {
       id: 4,
-      thumbnail: '/assets/designs/design-2.jpg',
+      thumbnail: '',
       title: 'Food Delivery Interface',
       description: 'Modern food ordering experience',
       type: 'App Design',
@@ -66,7 +67,7 @@ export default function DesignPortfolio() {
     },
     {
       id: 5,
-      thumbnail: '/assets/designs/design-3.jpg',
+      thumbnail: '',
       title: 'Travel Booking Platform',
       description: 'Intuitive travel planning interface',
       type: 'Web Design',
@@ -75,7 +76,7 @@ export default function DesignPortfolio() {
     },
     {
       id: 6,
-      thumbnail: '/assets/designs/design-4.jpg',
+      thumbnail: '',
       title: 'Productivity Dashboard',
       description: 'Task management and analytics',
       type: 'Dashboard',
@@ -84,7 +85,7 @@ export default function DesignPortfolio() {
     },
     {
       id: 7,
-      thumbnail: '/assets/designs/design-5.jpg',
+      thumbnail: '',
       title: 'Social Media App',
       description: 'Modern social networking interface',
       type: 'Mobile UI',
@@ -93,7 +94,7 @@ export default function DesignPortfolio() {
     },
     {
       id: 8,
-      thumbnail: '/assets/designs/design-6.jpg',
+      thumbnail: "",
       title: 'Music Streaming UI',
       description: 'Beautiful music player interface',
       type: 'App Design',

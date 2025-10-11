@@ -16,29 +16,31 @@ import DesignPortfolio from './page/DesignPage';
 
 
 function AnimatedRoutes(){
+  
   const location = useLocation();
   const getPageName = (pathname)=>{
+    let hasVisited = sessionStorage.getItem('hasVisited');
     const routes = {
-      '/': 'Home',
+      '/Home': hasVisited?'':'Welcome',
       '/About': 'About',
       '/Services': 'Services',
       '/Contact' : 'Contact',
       '/DevPage': 'Web Development',
       '/DesignPage': 'Product Design'
     };
-    return routes[pathname] || 'Home';
+    return routes[pathname]|| "Home";
   };
   return(
-    <AnimatePresence mode='wait'>
+    <AnimatePresence >
       <PageTransition key={location.pathname} pageName={getPageName(location.pathname)}>
         <Routes location={location}>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/Home' element={<Home/>}/>
           <Route path='/About' element ={<AboutPage/>}/>
           <Route path='/Services' element ={<ServicesPage/>}/>
           <Route path='/Contact' element ={<ContactPage/>}/>
           <Route path='DevPage' element ={<DevelopmentPortfolio/>}/>
           <Route path='/DesignPage' element={<DesignPortfolio/>}/>
-          <Route path='*' element ={<Navigate to="/" replace/>}/>
+          <Route path='*' element ={<Navigate to="/Home" replace/>}/>
         </Routes>
       </PageTransition>
     </AnimatePresence>

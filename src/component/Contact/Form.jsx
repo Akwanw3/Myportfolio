@@ -37,7 +37,7 @@ export default function ContactForm() {
       "RtuUhXybVxkV88RbG",
     ).then((response)=>{
       console.log('success',response.status, response.text);
-      alert("message sent succesfully!");
+      
 
     },
      (err)=>{
@@ -157,7 +157,7 @@ export default function ContactForm() {
         {/* Subject */}
         <div className="form-group">
           <label htmlFor="subject" className="form-label">
-            Subject <span className="required">*</span>
+            Subject 
           </label>
           <input
             type="text"
@@ -165,7 +165,6 @@ export default function ContactForm() {
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            required
             placeholder="Project Inquiry"
             className="form-input"
           />

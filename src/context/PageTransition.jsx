@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import '@/styles/PageTransition.css';
 
 export default function PageTransition({ children, pageName }) {
-  const [isFirstVisit, setIsFirstVisit] = useState(true);
+  const [isFirstVisit, setIsFirstVisit] = useState(false);
   const [displayText, setDisplayText] = useState('');
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -12,24 +12,25 @@ export default function PageTransition({ children, pageName }) {
     // Check if this is the first visit to the site
     const hasVisited = sessionStorage.getItem('hasVisited');
     
-    if (!hasVisited) {
-      setDisplayText('Welcome');
-      setIsFirstVisit(true);
-      sessionStorage.setItem('hasVisited', 'true');
-      setIsTransitioning(true);
-      
+    if (hasVisited) {
+     
+      setIsFirstVisit(false);
       // End transition after animation
       setTimeout(() => {
         setIsTransitioning(false);
       }, 2500);
     } else {
-      setIsFirstVisit(false);
+       setDisplayText('Welcome');
+      setIsFirstVisit(true);
+      sessionStorage.setItem('hasVisited', 'true');
+      setIsTransitioning(true);
     }
   }, []);
 
   useEffect(() => {
     // On page change (not first visit)
-    if (!isFirstVisit) {
+     const hasVisited = sessionStorage.getItem('hasVisited');
+    if (!isFirstVisit && hasVisited) {
       setDisplayText(pageName);
       setIsTransitioning(true);
       
@@ -182,15 +183,17 @@ export default function PageTransition({ children, pageName }) {
       </AnimatePresence>
 
       {/* Page Content */}
-      <motion.div
+      {!isTransitioning &&(
+        <motion.div
         key={pageName}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.3, delay:0.3 }}
       >
         {children}
       </motion.div>
+      )}
     </>
   );
 }

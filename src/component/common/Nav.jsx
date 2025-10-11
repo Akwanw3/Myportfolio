@@ -44,7 +44,7 @@ export default function Navbar() {
   };
 
   const handleNavClick = (section) => {
-    console.log(`Navigating to: ${section}`);
+    
     closeMobileMenu();
     setIsDropdownOpen(false);
   };

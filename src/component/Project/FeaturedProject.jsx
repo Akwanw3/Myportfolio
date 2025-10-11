@@ -1,10 +1,14 @@
 
-import { motion } from 'framer-motion';
-import { Figma, Eye } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Figma, Eye, X } from 'lucide-react';
+import { useState } from 'react';
 import '@/styles/DesignCards.css';
 
+
 export default function DesignShowcaseCard({ design, index }) {
+  const [showPopup, setShowPopup] = useState(false)
   return (
+    <>
     <motion.div 
       className="design-showcase-card"
       initial={{ opacity: 0, scale: 0.9 }}
@@ -27,6 +31,7 @@ export default function DesignShowcaseCard({ design, index }) {
             className="view-design-btn"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            onClick={()=>setShowPopup(true)}
           >
             <Eye size={20} />
             <span>View Design</span>
@@ -57,5 +62,40 @@ export default function DesignShowcaseCard({ design, index }) {
         </div>
       </div>
     </motion.div>
+
+    {/* POPUP OVERLAY */}
+      <AnimatePresence>
+        {showPopup && (
+          <motion.div 
+            className="design-popup-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowPopup(false)}
+          >
+            <motion.div 
+              className="design-popup-content"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button 
+                className="close-popup-btn"
+                onClick={() => setShowPopup(false)}
+              >
+                <X size={22} />
+              </button>
+              <img 
+                src={design.fullImage || design.thumbnail} 
+                alt={design.title} 
+                className="design-popup-image"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      </>
   );
 }
