@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import '@/styles/p.css';
+import '@/styles/Skill.css';
 export default function SkillsStats() {
   const stats = [
     { number: 50, label: "Projects Completed" },

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '@/styles/MyLogo.css';
+import '@/styles/Mylogo.css';
 
 export default function Logo({ size = 'medium', animated = true }) {
   const [isHovered, setIsHovered] = useState(false);

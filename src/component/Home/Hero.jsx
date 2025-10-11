@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Greeting from '@/component/Home/Greeting';
-import Introduction from '@/component/Home/Introduction';
+import TypingRoles from '@/component/Home/Introduction';
 import Button from '@/component/common/Button';
 import PortfolioModal from '@/component/Home/PortfolioModal';
 import '@/styles/Hero.css';
@@ -36,7 +36,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <Greeting userName={userName} />
-            <Introduction name="ABIA AKPE" />
+            <TypingRoles name="ABIA AKPE" />
             
             {/* Buttons positioned further down */}
             <motion.div 
