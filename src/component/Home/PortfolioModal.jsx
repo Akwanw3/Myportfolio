@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Code, Palette } from 'lucide-react';
 import Button from '@/component/common/Button';
-import '@/styles/PortfolioModal.css';
+import '@/styles/Modal.css';
 import { useNavigate } from 'react-router-dom';
 
 export default function PortfolioModal({ isOpen, onClose }) {
