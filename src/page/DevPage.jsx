@@ -102,15 +102,15 @@ export default function DevelopmentPortfolio() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="hero-title">Development Portfolio</h1>
-            <p className="hero-subtitle">
+            <h1 className=" text-4xl md:text-5xl sm:text-4xl lg:text-[64px] dark:bg-black font-black mb-6 bg-gradient-to-br from-[var(--text-primary,#1a1f3a)] to-[var(--accent-primary,#00d4ff)] bg-clip-text text-transparent leading-[1.2]">Development Portfolio</h1>
+            <p className="text-lg sm:text-xl md:text-[22px] text-[var(--text-muted,#718096)] leading-[1.6]">
               A showcase of my web development work - from concept to deployment
             </p>
           </motion.div>
         </div>
       </section>
 
-      <div className="portfolio-container">
+      <div className="portfolio-container px-4 md:px-14">
         {/* Filter Section */}
         <motion.div 
           className="filter-section"

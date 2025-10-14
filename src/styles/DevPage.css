@@ -8,7 +8,7 @@
 .portfolio-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 60px;
+  
 }
 
 /* Hero Section */
@@ -33,7 +33,7 @@
   line-height: 1.2;
 }
 
-.hero-subtitle {
+/*.hero-subtitle {
   font-size: 22px;
   color: var(--text-muted, #718096);
   line-height: 1.6;
@@ -150,7 +150,7 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .portfolio-container {
-    padding: 0 40px;
+    /* padding: 0 40px; */
   }
 }
 
@@ -184,11 +184,14 @@
 
 @media (max-width: 768px) {
   .portfolio-container {
-    padding: 0 30px;
+    /* padding: 0 30px; */
   }
 
   .hero-title {
     font-size: 36px;
+  }
+  .hero-subtitle{
+    font-size: 18px;
   }
 
   .filter-section {
@@ -202,11 +205,11 @@
 
 @media (max-width: 480px) {
   .portfolio-container {
-    padding: 0 20px;
+    /* padding: 0 20px; */
   }
 
   .hero-title {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .filter-tabs {
