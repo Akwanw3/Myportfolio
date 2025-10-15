@@ -161,6 +161,7 @@
 .project-description-side {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 40px;
 }
@@ -296,6 +297,7 @@
   }
   .project-description{
     position: static;
+    width: fit-content;
   }
 
   .card-content-wrapper {
@@ -348,5 +350,10 @@
   .project-link {
     width: 100%;
     justify-content: center;
+  }
+  .project-card{
+    width: 90%;
+    justify-self: center;
+    margin: 10px;
   }
 }

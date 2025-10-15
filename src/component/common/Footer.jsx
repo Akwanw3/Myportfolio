@@ -27,9 +27,6 @@ export default function Footer() {
       >
         <ArrowUp size={20} />
       </button>
-
-      
-        {/* Top Section */}
         
           {/* Brand Column */}
           <div className="footer-brand">

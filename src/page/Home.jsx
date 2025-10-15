@@ -9,7 +9,6 @@ function Home(){
             <Hero/>
             <SkillsSnapshot/>
           <div>
-           
           </div>
            <GetInTouchCard 
                    variant="colorful"

@@ -1,4 +1,5 @@
 /* CSS Variables for Themes */
+@import "tailwindcss";
 :root[data-theme="light"] {
   /* Backgrounds */
   --bg-primary: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 50%, #f0f3f7 100%);
@@ -7,6 +8,8 @@
   --card-bg: rgba(255, 255, 255, 0.8);
   --card-border: rgba(0, 0, 0, 0.08);
   --card-hover-border: rgba(0, 212, 255, 0.4);
+
+
   
   /* Text Colors */
   --text-primary: #1a1f3a;
@@ -51,11 +54,11 @@
   --skill-bg: rgba(0, 0, 0, 0.4);
 }
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 body {
   font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
@@ -63,6 +66,7 @@ body {
   color: var(--text-primary);
   transition: background 0.3s ease, color 0.3s ease;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Background gradient overlay */
