@@ -6,6 +6,7 @@ import ProjectCard from '../component/Project/ProjectCard';
 import GetInTouchCard from '@/component/common/CTASection';
 import ChaindustryFullstack from '@/assets/ChaindustryFullstack.png'
 import '@/styles/DevPage.css'
+import Learnmate from '@/assets/Learnmate.png'
 
 export default function DevelopmentPortfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -59,13 +60,13 @@ export default function DevelopmentPortfolio() {
     {
       id: 5,
       title: 'Portfolio Showcase',
-      description: 'Modern portfolio site with stunning animations, 3D elements, smooth scroll-triggered effects, and interactive components. Built with performance in mind.',
-      thumbnail: '/assets/projects/project5.jpg',
-      techStack: ['React', 'Three.js', 'GSAP'],
+      description: 'a modern educational landing page  It showcases clean UI design, responsive layouts, and component-based architecture focused on learning accessibility and simplicity, Built with performance in mind.',
+      thumbnail: Learnmate,
+      techStack: ['React', 'Three.js', 'TailwindCss'],
       type: 'frontend',
       featured: false,
-      liveLink: 'https://example.com',
-      githubLink: 'https://github.com'
+      liveLink: 'https://learnmate-pied.vercel.app/',
+      githubLink: 'https://github.com/Akwanw3/Learnmate'
     },
     {
       id: 6,
