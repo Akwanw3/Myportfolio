@@ -7,6 +7,7 @@ import GetInTouchCard from '@/component/common/CTASection';
 import ChaindustryFullstack from '@/assets/ChaindustryFullstack.png'
 import '@/styles/DevPage.css'
 import Learnmate from '@/assets/Learnmate.png'
+import Trendmart from '@/assets/Trendmart.png'
 
 export default function DevelopmentPortfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -26,14 +27,14 @@ export default function DevelopmentPortfolio() {
     },
     {
       id: 2,
-      title: 'StyleHub Marketplace',
-      description: 'Full-featured e-commerce platform with advanced product filtering, secure checkout, inventory management, and admin dashboard for seamless operations.',
-      thumbnail: '/assets/projects/project2.jpg',
+      title: 'TrendMart Marketplace',
+      description: 'A modern, fully responsive B2C e-commerce single-page application (SPA) built to showcase expertise in contemporary frontend architecture. It simulates a clean product browsing and shopping experience using dynamic data from a third-party API. The project demonstrates a mastery of global state management and component lifecycle in a production-like environment.',
+      thumbnail: Trendmart,
       techStack: ['React', 'Stripe', 'Node.js', 'PostgreSQL'],
       type: 'fullstack',
       featured: false,
-      liveLink: 'https://example.com',
-      githubLink: 'https://github.com'
+      liveLink: 'https://trend-mart-zeta.vercel.app/',
+      githubLink: 'https://github.com/Akwanw3/TrendMart'
     },
     {
       id: 3,
